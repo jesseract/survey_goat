@@ -3,5 +3,7 @@ class SendController < ApplicationController
   end
 
   def send_mail
+    params[:address]
+    #send email 
   end
 end

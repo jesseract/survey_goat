@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "sign_up" => "authors#new"
   get 'send/get_address'
   post 'send/send_mail'
+  get 'send/send_mail'
 
 
   resources :authors

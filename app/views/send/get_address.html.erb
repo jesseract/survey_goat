@@ -1,7 +1,7 @@
-<h1>Send#get_address</h1>
-<p>Find me in app/views/send/get_address.html.erb</p>
+<h1>Enter your email address</h1>
+<p>for all the goat-y goodness.</p>
 
 <%= form_tag send_send_mail_path do %>
-  <p>Address: <%= text_field_tag :address %></p>
+  <p>Address: <%= email_field_tag :address %></p>
   <%= submit_tag %>
   <% end %>
