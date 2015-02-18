@@ -17,4 +17,10 @@ class Survey < ActiveRecord::Base
       q.question_type != "Choice" || q.options.length > 0
     end
   end
+
+  def self.all_with_author_emails
+    self.joins("LEFT JOIN authors ON surveys.autho_id=authors.id").select("title, email AS author_email").all
+  end
+
+
 end
