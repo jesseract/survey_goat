@@ -4,10 +4,14 @@ Rails.application.routes.draw do
   post 'sessions/log_in'
   get 'sessions/log_out'
   get "sign_up" => "authors#new"
+  get 'send/get_address'
+  post 'send/send_mail'
+
+
   resources :authors
   resources :submissions
   resources :surveys
-  
+
   root 'surveys#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
